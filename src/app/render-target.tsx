@@ -1,7 +1,7 @@
 import React from 'react';
+import Dimensions from 'react-dimensions';
 
-
-export default class RenderTarget extends React.Component<{}, {}> {
+export class RenderTarget extends React.Component<{}, {}> {
     private width: number = 800;
     private height: number = 600;
 
@@ -31,3 +31,5 @@ export default class RenderTarget extends React.Component<{}, {}> {
         );
     }
 }
+
+export default Dimensions()(RenderTarget);

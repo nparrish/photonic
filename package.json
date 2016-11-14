@@ -1,28 +1,42 @@
 {
-  "name": "photonic",
+  "name": "electron-typescript-react-quick-start",
   "version": "1.0.0",
-  "description": "An Electron-based ray tracing app",
-  "main": "main.js",
+  "description": "A minimal Electron application with React",
+  "main": "dist/main.js",
   "scripts": {
-    "build": "webpack --progress --profile --colors --display-error-details --display-cached",
-    "watch": "webpack --watch --progress --profile --colors --display-error-details --display-cached",
-    "electron": "electron app"
+    "start": "electron dist/main.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claudioc/electron-typescript-react-quick-start.git"
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "react",
+    "systemjs"
+  ],
+  "author": "Claudio Cicali",
+  "license": "MIT",
   "devDependencies": {
-    "electron-prebuilt": "^0.35.4",
-    "es6-shim": "^0.34.0",
-    "ts-loader": "^0.7.2",
-    "typescript": "^1.7.3",
-    "webpack": "^1.12.9",
-    "webpack-dev-server": "^1.14.0"
+    "del": "^2.2.0",
+    "electron-prebuilt": "^1.0.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-inject": "^4.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-typescript": "^2.13.4",
+    "run-sequence": "^1.1.5",
+    "typescript": "^1.8.10"
   },
   "dependencies": {
-    "angular2": "2.0.0-beta.0",
-    "zone.js": "^0.5.10",
-    "bootstrap": "^3.3.6",
-    "gulp": "^3.9.0",
-    "es6-shim": "^0.33.3",
-    "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.0"
+    "@types/react-redux": "^4.4.32",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "react-redux": "^4.4.6",
+    "systemjs": "^0.19.27"
   }
 }

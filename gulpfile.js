@@ -5,9 +5,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
     sourcemaps = require('gulp-sourcemaps'),
-    typescript = require('gulp-typescript'),
-    electron = require('electron-connect').server.create()
-    watch = require('gulp-debounced-watch');
+    typescript = require('gulp-typescript');
 
 gulp.task('default', function (done) {
 
@@ -19,29 +17,8 @@ gulp.task('default', function (done) {
             'copy-app-package-file',
             'copy-app-main-file'
         ],
-        'build-html',
-        done
+        'build-html'
     );
-});
-
-gulp.task('serve', ['default'], function () {
-    // Start browser process
-    console.warn(electron);
-    electron.start('dist/main.js');
-
-    // Restart browser process
-    watch('dist/**/*', electron.reload);
-
-    // Reload renderer process
-    watch('src/**/*', function (done) {
-        inSequence(
-          'build-vendor',
-          'build-app',
-          'copy-app-package-file',
-          'copy-app-main-file',
-          'build-html'
-      );
-    });
 });
 
 gulp.task('clear', function (done) {
@@ -71,11 +48,11 @@ gulp.task('build-vendor', function(){
 
 gulp.task('build-app', function () {
 
-    var project = typescript.createProject('tsconfig.json', {});
+    var project = typescript.createProject('tsconfig.json', { sortOutput: true });
 
     var tsResult = project.src()
         .pipe(sourcemaps.init())
-        .pipe(project());
+        .pipe(typescript(project));
 
     return tsResult.js
             .pipe(sourcemaps.write())

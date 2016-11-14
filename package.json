@@ -1,22 +1,28 @@
 {
-  "name": "electron-quick-start",
+  "name": "photonic",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "An Electron-based ray tracing app",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "build": "webpack --progress --profile --colors --display-error-details --display-cached",
+    "watch": "webpack --watch --progress --profile --colors --display-error-details --display-cached",
+    "electron": "electron app"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^1.4.1"
+    "electron-prebuilt": "^0.35.4",
+    "es6-shim": "^0.34.0",
+    "ts-loader": "^0.7.2",
+    "typescript": "^1.7.3",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "dependencies": {
+    "angular2": "2.0.0-beta.0",
+    "zone.js": "^0.5.10",
+    "bootstrap": "^3.3.6",
+    "gulp": "^3.9.0",
+    "es6-shim": "^0.33.3",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.0"
   }
 }

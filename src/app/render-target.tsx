@@ -24,16 +24,9 @@ export class RenderTarget extends React.Component<{ containerWidth: number, cont
 
     render() {
         return (
-            <canvas ref="canvas" />
+            <canvas ref="canvas" style={{ width: "100%", height: "100%" }} />
         );
     }
 }
 
-export default Dimensions({
-    getHeight: element => {
-        return element.clientHeight;
-    },
-    getWidth: element => {
-        return element.clientWidth;
-    }
-})(RenderTarget);
+export default Dimensions()(RenderTarget);

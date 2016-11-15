@@ -1,20 +1,17 @@
 import React from 'react';
 import Dimensions from 'react-dimensions';
 
-export class RenderTarget extends React.Component<{}, {}> {
-    private width: number = 800;
-    private height: number = 600;
-
+export class RenderTarget extends React.Component<{ containerWidth: number, containerHeight: number }, {}> {
     componentDidMount() {
         this.updateCanvas();
     }
 
     updateCanvas() {
         const ctx: CanvasRenderingContext2D = (this.refs['canvas'] as any).getContext('2d');
-        let imageData: ImageData = ctx.createImageData(this.width, this.height);
-        for (let x: number = 0; x < this.width; ++x) {
-            for (let y: number = 0; y < this.height; ++y) {
-                let arrayCoords: number = (y * this.width + x) * 4;
+        let imageData: ImageData = ctx.createImageData(this.props.containerWidth, this.props.containerHeight);
+        for (let x: number = 0; x < this.props.containerWidth; ++x) {
+            for (let y: number = 0; y < this.props.containerHeight; ++y) {
+                let arrayCoords: number = (y * this.props.containerWidth + x) * 4;
                 imageData.data[arrayCoords] = 255;
                 imageData.data[arrayCoords+1] = 0;
                 imageData.data[arrayCoords+2] = 0;
@@ -27,9 +24,16 @@ export class RenderTarget extends React.Component<{}, {}> {
 
     render() {
         return (
-            <canvas ref="canvas" width={this.width} height={this.height}/>
+            <canvas ref="canvas" />
         );
     }
 }
 
-export default Dimensions()(RenderTarget);
+export default Dimensions({
+    getHeight: element => {
+        return element.clientHeight;
+    },
+    getWidth: element => {
+        return element.clientWidth;
+    }
+})(RenderTarget);

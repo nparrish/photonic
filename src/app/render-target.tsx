@@ -1,5 +1,5 @@
-import React from 'react';
-import Dimensions from 'react-dimensions';
+import * as React from 'react';
+import * as Dimensions from 'react-dimensions';
 
 export class RenderTarget extends React.Component<{ containerWidth: number, containerHeight: number }, {}> {
     componentDidMount() {

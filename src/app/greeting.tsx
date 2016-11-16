@@ -1,8 +1,8 @@
 import RenderTarget from './render-target';
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 
-export default class Greeting {
+export class Greeting {
 
     hello() {
 

@@ -11,6 +11,9 @@
     "noImplicitAny": false,
     "jsx": "react"
   },
+  
+  "compileOnSave": false,
+
   "exclude": [
     "typings/browser.d.ts",
     "typings/browser",

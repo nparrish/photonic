@@ -1,6 +1,8 @@
-import { Greeting } from './greeting';
+import 'react-mdl/extra/material';
+import 'react-mdl/extra/material.css';
+import 'redux';
+import { Photonic } from './photonic';
 
-const greeting = new Greeting();
+const app = new Photonic();
 
-greeting.hello();
-
+app.init();

@@ -8,6 +8,8 @@ module.exports = {
     },
 
     target: 'node',
+
+    devtool: 'source-map',
     
     output: {
         path: __dirname + '/dist',
@@ -24,6 +26,7 @@ module.exports = {
         loaders: [
             // note that babel-loader is configured to run after ts-loader
             { test: /\.ts(x?)$/, loader: "babel-loader?presets[]=es2015!ts-loader" },
+            { test: /\.css$/, loader: "style-loader!css-loader" }
         ]
     },
 

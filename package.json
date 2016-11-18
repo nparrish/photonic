@@ -1,47 +1,47 @@
 {
-  "name": "photonic",
-  "version": "1.0.0",
-  "description": "An Electron-based ray-tracing application with React",
-  "main": "dist/main.js",
-  "scripts": {
-    "build": "webpack",
-    "start": "electron dist/main.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nparrish/photonic.git"
-  },
-  "keywords": [],
-  "author": "Nathan Parrish",
-  "license": "MIT",
-  "devDependencies": {
-    "babel-core": "^6.18.2",
-    "babel-loader": "^6.2.7",
-    "babel-preset-es2015": "^6.18.0",
-    "copy-webpack-plugin": "^4.0.1",
-    "css-loader": "^0.25.0",
-    "html-webpack-plugin": "^2.24.1",
-    "run-sequence": "^1.1.5",
-    "style-loader": "^0.13.1",
-    "ts-loader": "^1.2.1",
-    "typescript": "^2.0.9",
-    "webpack": "1.13.0"
-  },
-  "dependencies": {
-    "@types/node": "^6.0.47",
-    "@types/react": "^0.14.47",
-    "@types/react-dom": "^0.14.18",
-    "@types/react-mdl": "^1.7.18",
-    "@types/react-redux": "^4.4.32",
-    "@types/redux": "^3.6.31",
-    "electron": "^1.4.6",
-    "react-dimensions": "^1.3.0",
-    "react-dom": "^15.0.2",
-    "react-mdl": "^1.7.2",
-    "react-redux": "^4.4.6",
-    "redux": "^3.0.0"
-  },
-  "peerDependencies": {
-    "react": "^15.0.2"
-  }
+    "name": "photonic",
+    "version": "1.0.0",
+    "description": "An Electron-based ray-tracing application with React",
+    "main": "dist/main.js",
+    "scripts": {
+        "build": "webpack",
+        "start": "electron dist/main.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nparrish/photonic.git"
+    },
+    "keywords": [],
+    "author": "Nathan Parrish",
+    "license": "MIT",
+    "devDependencies": {
+        "babel-core": "^6.18.2",
+        "babel-loader": "^6.2.7",
+        "babel-preset-es2015": "^6.18.0",
+        "copy-webpack-plugin": "^4.0.1",
+        "css-loader": "^0.25.0",
+        "html-webpack-plugin": "^2.24.1",
+        "run-sequence": "^1.1.5",
+        "style-loader": "^0.13.1",
+        "ts-loader": "^1.2.1",
+        "typescript": "^2.0.9",
+        "webpack": "1.13.0"
+    },
+    "dependencies": {
+        "@types/node": "^6.0.47",
+        "@types/react": "^0.14.47",
+        "@types/react-dom": "^0.14.18",
+        "@types/react-mdl": "^1.7.18",
+        "@types/react-redux": "^4.4.32",
+        "@types/redux": "^3.6.31",
+        "electron": "^1.4.6",
+        "react-dimensions": "^1.3.0",
+        "react-dom": "^15.0.2",
+        "react-mdl": "^1.7.2",
+        "react-redux": "^4.4.6",
+        "redux": "^3.0.0"
+    },
+    "peerDependencies": {
+        "react": "^15.4.0"
+    }
 }
